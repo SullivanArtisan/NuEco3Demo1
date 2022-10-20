@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 	<head>
 		<title>NuPlastic Recycling</title>
 		<meta charset="utf-8" />
@@ -21,7 +21,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="index.html" id="logo">NuPlastic Recycling System</a></h1>
+								<h1>NuPlastic Recycling System</h1>
 								<hr />
 								<p>We make recycling more greener!</p>
 							</header>
@@ -34,7 +34,7 @@
 					<!--
 						<nav id="nav">
 							<ul>
-								<li><a href="index.html">Home</a></li>
+								<li><a href="index.html">Dashboard</a></li>
 								<li>
 									<a href="#">Dropdown</a>
 									<ul>
@@ -67,7 +67,7 @@
 					<header>
 						<h2>Welcome to NuEco 3.0 Login Console </h2>
 						<p>
-							Please choose one role log in.
+							Please choose a role to log in.
 						</p>
 					</header>
 				</section>
@@ -77,29 +77,30 @@
 					<div class="reel">
 
 						<article>
-							<a href="#" class="image featured"><img src="images/administrator2.png" alt="" /></a>
+							<a href="{{route('administrator_login')}}" class="image featured"><img src="images/administrator2.png" alt="" /></a>
 							<header>
-								<h3><a href="#">Administrator</a></h3>
+								<h3><a href="{{route('administrator_login')}}">Administrator</a></h3>
 							</header>
 							<p>Log in as an administrator to manipulate database directly.</p>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/dispatcher.png" alt="" /></a>
+							<a href="{{route('dispatcher_login')}}" class="image featured"><img src="images/dispatcher.png" alt="" /></a>
 							<header>
-								<h3><a href="#">Dispatcher</a></h3>
+								<h3><a href="{{route('dispatcher_login')}}">Dispatcher</a></h3>
 							</header>
 							<p>Log in as an dispatcher to assign/update a pickup/delivery to a driver...etc.</p>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/receiver.png" alt="" /></a>
+							<a href="{{route('receiver_login')}}" class="image featured"><img src="images/receiver.png" alt="" /></a>
 							<header>
-								<h3><a href="#">Receiver</a></h3>
+								<h3><a href="{{route('receiver_login')}}">Receiver</a></h3>
 							</header>
 							<p>Log in as a receiver to process a delivery's scale ticket.</p>
 						</article>
 
+						<!--
 						<article>
 							<a href="#" class="image featured"><img src="images/driver.png" alt="" /></a>
 							<header>
@@ -107,6 +108,7 @@
 							</header>
 							<p>Log in as a driver to process a pickup/delivery.</p>
 						</article>
+						-->
 					</div>
 				</section>
 
